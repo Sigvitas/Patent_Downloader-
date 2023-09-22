@@ -1,4 +1,3 @@
-/* Reset default browser styles */
 body,
 h1,
 h2,
@@ -9,7 +8,7 @@ li {
     padding: 0;
 }
 
-/* Set a common font family and background color */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #b2a6a6;

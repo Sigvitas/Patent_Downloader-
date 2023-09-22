@@ -27,15 +27,14 @@
 
     <script>
         function fetchPatent() {
-            // Get the user's input for the patent number
+       
             const patentNumber = document.getElementById('patentNumber').value;
 
-            // Check if the input is not empty
             if (patentNumber.trim() !== "") {
-                // Redirect to the result page with the patent number as a query parameter
+         
                 window.location.href = `result.html?patent=${patentNumber}`;
             } else {
-                // Display an error message if the input is empty
+ 
                 alert("Please enter a valid patent number.");
             }
         }
