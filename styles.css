@@ -1,0 +1,99 @@
+/* Reset default browser styles */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a common font family and background color */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #b2a6a6;
+    color: #333;
+}
+
+/* Header styles */
+#header {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Container for content */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the added paragraphs */
+.container h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Styling for the input field and button */
+.container input[type="text"] {
+    width: 55%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.container button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #0056b3;
+}
+
+/* NOTE paragraph */
+.container .note {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* Add some spacing to the footer */
+#footer {
+    margin-top: 50px;
+}
+
+/* Footer links */
+#footer a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#footer a:hover {
+    color: #0056b3;
+}

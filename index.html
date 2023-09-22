@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>USPTO Patent PDF Downloader</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div id="header">
+        <h1>USPTO Patent PDF Downloader</h1>
+    </div>
+    <div class="container">
+        <h2>Download U.S. Patents (in PDF) and More</h2>
+        <p>To download a copy of a patent from the U.S. Patent and Trademark Office, please enter your request in the
+            format below:</p>
+        <p>For US Utility Patent, enter in the format: 5123123 or 5,123,123</p>
+        <p>For US Patent Publication, enter in the format: 20150150184 or 2015/0150184</p>
+        <input type="text" id="patentNumber" placeholder="Enter Patent Number">
+        <button onclick="fetchPatent()">Fetch Patent</button>
+        <p class="note"><strong>NOTE:</strong> Failed patents will be removed from cache every 15 minutes. If you
+            retrieve an empty PDF, please try again 15 minutes later.</p>
+    </div>
+    <div id="footer">
+        <p>© 2023 USPTO Patent PDF Downloader Designed by <a href="https://sigvitas.com/">Sigvitas & Company</a>| <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+
+    <script>
+        function fetchPatent() {
+            // Get the user's input for the patent number
+            const patentNumber = document.getElementById('patentNumber').value;
+
+            // Check if the input is not empty
+            if (patentNumber.trim() !== "") {
+                // Redirect to the result page with the patent number as a query parameter
+                window.location.href = `result.html?patent=${patentNumber}`;
+            } else {
+                // Display an error message if the input is empty
+                alert("Please enter a valid patent number.");
+            }
+        }
+    </script>
+</body>
+
+</html>

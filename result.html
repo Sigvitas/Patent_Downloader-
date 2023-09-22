@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Patent Result</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div id="header">
+        <h1>USPTO Patent PDF Downloader</h1>
+    </div>
+    <div class="container" id="result">
+        <p>Patent Number: <strong id="patentNumber"></strong></p>
+        <button id="download-btn" onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <script>
+        // Get the patent number from the query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const patentNumber = urlParams.get('patent');
+
+        if (patentNumber) {
+            // Display the patent number on the result page
+            document.getElementById('patentNumber').textContent = patentNumber;
+        } else {
+            // Handle the case where no patent number is provided
+            alert("No patent number found.");
+        }
+
+        function downloadPDF() {
+            // Generate the URL based on the patent number
+            const downloadURL = `https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/${patentNumber}`;
+
+            // Initiate the download without navigating to the URL
+            const link = document.createElement("a");
+            link.href = downloadURL;
+            link.style.display = "none";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+
+</html>
